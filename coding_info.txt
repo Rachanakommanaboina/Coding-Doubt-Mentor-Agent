@@ -1,0 +1,62 @@
+# Python Basics
+A variable in Python is a name that references a value stored in memory; Python is dynamically typed, so you don't declare a type explicitly.
+A list is a mutable, ordered collection in Python, created with square brackets, and supports indexing, slicing, and methods like append and pop.
+A tuple is an immutable, ordered collection in Python, created with parentheses; use it when data should not change after creation.
+A dictionary is an unordered collection of key-value pairs in Python, created with curly braces, offering average O(1) lookup by key.
+List comprehension is a concise way to create a list using a single line, e.g. [x*x for x in range(10)], instead of a full for-loop.
+A function in Python is defined using the def keyword, can take default arguments, *args for variable positional arguments, and **kwargs for variable keyword arguments.
+Python's None represents the absence of a value, similar to null in other languages.
+
+# Common Python Errors
+IndexError occurs when you try to access a list or string index that is out of range, e.g. accessing my_list[5] on a 3-element list.
+KeyError occurs when you try to access a dictionary key that does not exist; use dict.get(key, default) to avoid this.
+TypeError occurs when an operation is applied to an object of an inappropriate type, e.g. adding a string and an integer directly.
+NameError occurs when you reference a variable or function that has not been defined yet in the current scope.
+IndentationError occurs when Python code blocks are not consistently indented; Python uses indentation to define code blocks instead of braces.
+AttributeError occurs when you try to access a method or attribute that doesn't exist on an object, often from a typo or wrong object type.
+ZeroDivisionError occurs when dividing a number by zero; wrap risky division in a try/except block to handle it gracefully.
+
+# Java Basics
+Java is a statically typed, object-oriented language where every variable must be declared with a type before use.
+A class in Java is a blueprint for objects, containing fields (state) and methods (behavior).
+An interface in Java defines a contract of method signatures that implementing classes must provide, supporting multiple inheritance of type.
+Java uses try-catch-finally blocks for exception handling; checked exceptions must be declared or caught, while unchecked exceptions (like NullPointerException) do not.
+NullPointerException occurs when you call a method or access a field on a reference variable that is null.
+ArrayIndexOutOfBoundsException occurs when accessing an array index that is negative or greater than or equal to the array's length.
+The 'static' keyword in Java means a field or method belongs to the class itself rather than to any specific instance.
+
+# Object-Oriented Programming (Common to Java/Python/C++)
+Encapsulation means bundling data and the methods that operate on it, and restricting direct access to internal state using access modifiers.
+Inheritance lets a subclass reuse and extend the fields and methods of a parent class using 'extends' (Java) or class inheritance syntax (Python).
+Polymorphism lets the same method name behave differently depending on the object calling it — via method overriding (runtime) or overloading (compile-time).
+Abstraction means exposing only essential behavior through interfaces or abstract classes, hiding implementation detail from the caller.
+Composition is a design principle where a class contains references to other classes to reuse functionality, often preferred over deep inheritance chains.
+
+# Data Structures & Algorithms Doubts
+Big-O notation describes how an algorithm's runtime or space grows relative to input size, e.g. O(1), O(log n), O(n), O(n log n), O(n^2).
+A stack overflow in recursion usually means the base case is missing or unreachable, causing infinite recursive calls.
+Two-pointer technique uses two indices moving through a data structure (often an array) to solve problems in O(n) instead of O(n^2), common in sorted-array problems.
+Sliding window technique maintains a subset of elements (a "window") over an array/string to solve subarray/substring problems efficiently.
+A hash map (dictionary/HashMap) is commonly used to solve "find pairs" or "count frequency" problems in O(n) instead of a nested-loop O(n^2) approach.
+Recursion is a function calling itself to solve smaller subproblems; every recursive function needs a base case to terminate.
+Memoization is caching the results of expensive function calls (often recursive ones) to avoid redundant computation, commonly used in dynamic programming.
+
+# SQL Doubts
+A SELECT statement retrieves data from one or more tables; use WHERE to filter rows and ORDER BY to sort results.
+GROUP BY groups rows sharing a value in specified columns, often used with aggregate functions like COUNT, SUM, AVG, MAX, MIN.
+An INNER JOIN returns only rows with matching values in both tables, while a LEFT JOIN returns all rows from the left table plus matches from the right (NULLs where there's no match).
+A subquery is a query nested inside another query, often used in WHERE or FROM clauses to filter based on computed results.
+An index speeds up SELECT queries on a column but can slow down INSERT/UPDATE/DELETE operations due to the extra maintenance overhead.
+
+# Git & Version Control Doubts
+'git add' stages changes for the next commit; 'git commit' saves the staged changes to the local repository history.
+'git push' uploads local commits to a remote repository; 'git pull' fetches and merges remote changes into your local branch.
+A merge conflict occurs when Git cannot automatically reconcile changes between branches on the same lines of a file, requiring manual resolution.
+'git branch' creates a new branch; 'git checkout' (or 'git switch') moves you between branches; 'git merge' combines branch histories.
+'.gitignore' specifies files and folders that Git should not track, such as build artifacts or environment files.
+
+# Debugging Strategies
+When debugging, first reproduce the error consistently, then isolate the smallest code snippet that still causes it.
+Reading the full stack trace from the bottom up usually reveals the exact line and call chain that caused the error.
+Print statements or a debugger (breakpoints) help inspect variable values at the point where behavior diverges from expectations.
+Off-by-one errors are common in loops; double-check whether a loop condition should use < or <=, and whether indices start at 0 or 1.
